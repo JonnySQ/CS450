@@ -46,7 +46,7 @@ class Model():
        #Compare distances to all trainData to each trainTarget
        for i in range (len(testData)):
           for j in range (len(self.trainData)):
-             print(i, j, distance(testData[i], self.trainData[j]))
+             #print(i, j, distance(testData[i], self.trainData[j]))
              distances[j] = distance(testData[i], self.trainData[j])
           
           zeros = 0
@@ -54,10 +54,11 @@ class Model():
           twos = 0
           
           for nbr in range(self.k):
-             print("*",distances.argmin(), self.trainTarget[distances.argmin()])
-             print(distances[distances.argmin()])
-             print("---")
+             #print("*",distances.argmin(), self.trainTarget[distances.argmin()])
+             #print(distances[distances.argmin()])
+             #print("---")
              distances[distances.argmin()] = 100
+             
              #tally up the votes
              if (self.trainTarget[distances.argmin()] == 0):
                  zeros += 1
